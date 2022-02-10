@@ -37,7 +37,7 @@ const Meta: React.FC<MetaProps> = ({
 		<meta charSet="utf-8" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name={title} content={description} />
-		<link rel="apple-touch-icon" href="/logo192.png" />
+		<link rel="apple-touch-icon" href="/logo.svg" />
 		<link rel="manifest" href="/manifest.json" />
 		<title>{title}</title>
 
