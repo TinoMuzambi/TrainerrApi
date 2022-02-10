@@ -1,0 +1,23 @@
+{
+	"private": true,
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start",
+		"type-check": "tsc"
+	},
+	"dependencies": {
+		"next": "latest",
+		"react": "latest",
+		"mongoose": "latest",
+		"react-dom": "latest"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/react": "latest",
+		"@types/react-dom": "latest",
+		"sass": "latest",
+		"typescript": "latest"
+	},
+	"license": "MIT"
+}
