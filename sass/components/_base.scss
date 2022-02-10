@@ -11,9 +11,16 @@
 
 body {
 	overflow-x: hidden;
+	background: $primary-colour;
+	color: $white;
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+header {
+	display: flex;
+	justify-content: center;
 }
