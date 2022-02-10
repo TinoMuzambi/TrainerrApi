@@ -35,7 +35,7 @@ const Meta: React.FC<MetaProps> = ({
 		<meta name="twitter:image" content={image} />
 
 		<meta charSet="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/logo.svg" />
 		<meta name={title} content={description} />
 		<link rel="apple-touch-icon" href="/logo.svg" />
 		<link rel="manifest" href="/manifest.json" />
