@@ -1,6 +1,6 @@
 {
-	"short_name": "With TypeScript, Sass and MongoDB",
-	"name": "With TypeScript, Sass and MongoDB Boilerplate",
+	"short_name": "Trainerr",
+	"name": "Trainerr - Schedules for trains",
 	"icons": [
 		{
 			"src": "favicon.ico",

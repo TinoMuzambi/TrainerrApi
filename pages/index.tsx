@@ -1,9 +1,5 @@
 const Home: React.FC = (): JSX.Element => {
-	return (
-		<main>
-			<p>Clean Next.js with TypeScript and Sass Boilerplate</p>
-		</main>
-	);
+	return <main></main>;
 };
 
 export default Home;

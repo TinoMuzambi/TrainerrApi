@@ -47,9 +47,11 @@ const Meta: React.FC<MetaProps> = ({
 );
 
 Meta.defaultProps = {
-	title: "Next.js Boilerplate",
-	keywords: "next.js",
-	description: "Clean Next.js with TypeScript, Sass and MongoDB Boilerplate",
+	title: "Trainerr",
+	keywords:
+		"next.js, typescript, cape town, cape town trains, train, trains, schedule",
+	description:
+		"Trainerr - An easier way to view schedules for Cape Town trains.",
 	image: "https://unsplash.it/1000",
 	url: BASE_URL,
 };
