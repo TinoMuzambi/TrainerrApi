@@ -9,3 +9,11 @@ export interface MetaProps {
 	url?: string;
 	image?: string;
 }
+
+export interface RouteModel {
+	departingStation: string;
+	arrivingStation: string;
+	departingTime: Date;
+	arrivingTime: Date;
+	trainNumber: number;
+}
