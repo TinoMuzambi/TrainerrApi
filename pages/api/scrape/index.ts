@@ -85,6 +85,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				});
 
 				await page.goto("https://cttrains.co.za/ss_route_select.php");
+				fs.writeFileSync("output.json", JSON.stringify(pageContent), {
+					flag: "a",
+				});
 			}
 		}
 
@@ -96,7 +99,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	}
 
 	res.status(200).json({ success: true, pages });
-	fs.writeFileSync("output.json", JSON.stringify(pages));
 };
 
 export default handler;
