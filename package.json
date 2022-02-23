@@ -13,6 +13,7 @@
 		"type-check": "tsc"
 	},
 	"dependencies": {
+		"moment": "^2.29.1",
 		"mongoose": "latest",
 		"next": "latest",
 		"puppeteer": "^13.3.2",
