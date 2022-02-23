@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
+import moment from "moment";
 
 import Route from "../../../models/Route";
 
@@ -22,6 +23,16 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 					pairs.push(pair);
 					pair = [];
 				}
+			});
+		});
+
+		pairs.forEach((route: any) => {
+			Route.create({
+				departingStation: route[0].city,
+				arrivingStation: route[1].city,
+				departingTime: route[0].typeTime,
+				arrivingTime: route[1].typeTime,
+				trainNumber: route[0].trainNumber,
 			});
 		});
 	} catch (error) {
