@@ -3,10 +3,12 @@ import fs from "fs";
 import moment from "moment";
 
 import Route from "../../../models/Route";
+import dbConnect from "../../../utils/db";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	let pairs: any[] = [];
 	try {
+		await dbConnect();
 		const data = JSON.parse(
 			fs.readFileSync("./output.json", {
 				encoding: "utf8",
@@ -26,8 +28,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			});
 		});
 
-		pairs.forEach((route: any) => {
-			Route.create({
+		pairs.forEach(async (route: any) => {
+			await Route.create({
 				departingStation: route[0].city,
 				arrivingStation: route[1].city,
 				departingTime: route[0].typeTime,
