@@ -3,11 +3,12 @@ import puppeteer from "puppeteer";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	let browser;
+	let pages = [];
 
 	try {
 		// Launch browser
 		browser = await puppeteer.launch({
-			headless: false,
+			headless: true,
 			ignoreHTTPSErrors: true,
 		});
 
@@ -20,6 +21,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
 		// Select arrival station
 		await page.select("#arriveStation", "2");
+
+		let pageContent = {};
 
 		// Select travel days
 		await page.click(
@@ -38,7 +41,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		// Get page content.
 		const trainNumbers = await page.$$eval(
 			"body > .bgMiddle > table > tbody > tr > td",
-			(nodes) => nodes.map((node) => node.innerHTML)
+			(nodes) =>
+				nodes.map((node) => Number.parseInt(node.innerHTML.split(" ")[2]))
 		);
 		const departArriveTimes = await page.$$eval(
 			"body > .bgBottom > table > tbody > tr",
@@ -64,14 +68,20 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			return { type, city, typeTime };
 		});
 
-		console.log(departArriveTimesObj);
+		pageContent = departArriveTimesObj.map((obj, index) => {
+			return {
+				...obj,
+				trainNumber: trainNumbers[index],
+			};
+		});
+		pages.push(pageContent);
 	} catch (error) {
 		return res.status(400).json({ success: false, error });
 	} finally {
 		await browser?.close();
 	}
 
-	res.status(200).json({ success: true });
+	res.status(200).json({ success: true, pages });
 };
 
 export default handler;
