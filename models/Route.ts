@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-import { RouteModel } from "../../interfaces";
+import { RouteModel } from "../interfaces";
 
 const Route: Schema = new mongoose.Schema(
 	{

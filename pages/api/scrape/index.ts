@@ -2,11 +2,17 @@ import { NextApiRequest, NextApiResponse } from "next";
 import puppeteer from "puppeteer";
 import fs from "fs";
 
+import Route from "../../../models/Route";
+import dbConnect from "../../../utils/db";
+
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	let browser;
 	let pages = [];
 
 	try {
+		// Connect to db
+		await dbConnect();
+
 		// Launch browser
 		browser = await puppeteer.launch({
 			headless: true,
@@ -83,6 +89,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 						trainNumber: trainNumbers[Math.floor(index / 2)],
 					};
 				});
+				Route.create(pageContent);
 
 				await page.goto("https://cttrains.co.za/ss_route_select.php");
 				pages.push(pageContent);
@@ -94,9 +101,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		await browser?.close();
 	}
 
-	fs.writeFileSync("output.json", JSON.stringify(pages), {
-		flag: "a",
-	});
+	// fs.writeFileSync("output.json", JSON.stringify(pages), {
+	// 	flag: "a",
+	// });
 	res.status(200).json({ success: true, pages });
 };
 
