@@ -85,19 +85,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				});
 
 				await page.goto("https://cttrains.co.za/ss_route_select.php");
-				fs.writeFileSync("output.json", JSON.stringify(pageContent), {
-					flag: "a",
-				});
+				pages.push(pageContent);
 			}
 		}
-
-		pages.push(pageContent);
 	} catch (error) {
 		return res.status(400).json({ success: false, error });
 	} finally {
 		await browser?.close();
 	}
 
+	fs.writeFileSync("output.json", JSON.stringify(pages), {
+		flag: "a",
+	});
 	res.status(200).json({ success: true, pages });
 };
 
