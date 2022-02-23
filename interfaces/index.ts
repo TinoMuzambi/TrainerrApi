@@ -13,7 +13,7 @@ export interface MetaProps {
 export interface RouteModel {
 	departingStation: string;
 	arrivingStation: string;
-	departingTime: Date;
-	arrivingTime: Date;
+	departingTime: string;
+	arrivingTime: string;
 	trainNumber: number;
 }
