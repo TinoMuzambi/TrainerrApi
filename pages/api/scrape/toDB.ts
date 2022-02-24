@@ -39,6 +39,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				arrivingStation: item[1].station,
 				trainNumber: item[0].trainNumber,
 				times,
+				line: item[0].line,
 			});
 		});
 	} catch (error) {
