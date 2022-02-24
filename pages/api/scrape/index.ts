@@ -60,21 +60,23 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				const departArriveTimesObj = departArriveTimes.map((time) => {
 					let type: string = "";
 					let typeTime: string = "";
-					let city: string = "";
+					let station: string = "";
 					type = time.substring(time.indexOf(">") + 1, time.indexOf(":<"));
 					const strippedTime = time.substring(time.indexOf(type));
-					const cityTime = strippedTime.substring(
+					const stationTime = strippedTime.substring(
 						strippedTime.indexOf("color:black") + 13,
 						strippedTime.lastIndexOf("<")
 					);
 
-					let cityTimeSplit = cityTime.split(" ").filter((el) => el !== "");
+					let stationTimeSplit = stationTime
+						.split(" ")
+						.filter((el) => el !== "");
 
-					typeTime = cityTimeSplit[cityTimeSplit.length - 1];
-					cityTimeSplit.length = cityTimeSplit.length - 1;
-					city = cityTimeSplit.join(" ");
+					typeTime = stationTimeSplit[stationTimeSplit.length - 1];
+					stationTimeSplit.length = stationTimeSplit.length - 1;
+					station = stationTimeSplit.join(" ");
 
-					return { type, city, typeTime };
+					return { type, station, typeTime };
 				});
 
 				pageContent = departArriveTimesObj.map((obj, index) => {
