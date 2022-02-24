@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		await dbConnect();
 		const data = JSON.parse(
-			fs.readFileSync("./data/output.json", {
+			fs.readFileSync("./data/fshsim.json", {
 				encoding: "utf8",
 				flag: "r",
 			})

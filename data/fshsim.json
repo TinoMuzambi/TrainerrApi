@@ -1,0 +1,518 @@
+[
+	[
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "06:15",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Arrive",
+			"station": "Sunny Cove",
+			"typeTime": "06:19",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "07:15",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Arrive",
+			"station": "Sunny Cove",
+			"typeTime": "07:19",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "09:20",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Arrive",
+			"station": "Sunny Cove",
+			"typeTime": "09:24",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "14:40",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Arrive",
+			"station": "Sunny Cove",
+			"typeTime": "14:44",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "16:50",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Arrive",
+			"station": "Sunny Cove",
+			"typeTime": "16:54",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "17:50",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		},
+		{
+			"type": "Arrive",
+			"station": "Sunny Cove",
+			"typeTime": "17:54",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		}
+	],
+	[
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "06:15",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "06:28",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "07:15",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "07:28",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "09:20",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "09:33",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "14:40",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "14:53",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "16:50",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "17:03",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "17:50",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "18:03",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		}
+	],
+	[
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "06:15",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "06:35",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "07:15",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "07:35",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "09:20",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "09:40",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "14:40",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "15:00",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "16:50",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "17:10",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Depart",
+			"station": "Fish Hoek",
+			"typeTime": "17:50",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "18:10",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		}
+	],
+	[
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "06:19",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "06:28",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "07:19",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "07:28",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "09:24",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "09:33",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "14:44",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "14:53",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "16:54",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "17:03",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "17:54",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		},
+		{
+			"type": "Arrive",
+			"station": "Glencairn",
+			"typeTime": "18:03",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		}
+	],
+	[
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "06:19",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "06:35",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "07:19",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "07:35",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "09:24",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "09:40",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "14:44",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "15:00",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "16:54",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "17:10",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Depart",
+			"station": "Sunny Cove",
+			"typeTime": "17:54",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "18:10",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		}
+	],
+	[
+		{
+			"type": "Depart",
+			"station": "Glencairn",
+			"typeTime": "06:28",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "06:35",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 201
+		},
+		{
+			"type": "Depart",
+			"station": "Glencairn",
+			"typeTime": "07:28",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "07:35",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 203
+		},
+		{
+			"type": "Depart",
+			"station": "Glencairn",
+			"typeTime": "09:33",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "09:40",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 207
+		},
+		{
+			"type": "Depart",
+			"station": "Glencairn",
+			"typeTime": "14:53",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "15:00",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 209
+		},
+		{
+			"type": "Depart",
+			"station": "Glencairn",
+			"typeTime": "17:03",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "17:10",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 213
+		},
+		{
+			"type": "Depart",
+			"station": "Glencairn",
+			"typeTime": "18:03",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		},
+		{
+			"type": "Arrive",
+			"station": "Simonstown",
+			"typeTime": "18:10",
+			"line": "Fish Hoek - Simonstown Line",
+			"trainNumber": 215
+		}
+	]
+]
