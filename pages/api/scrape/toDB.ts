@@ -4,6 +4,7 @@ import moment from "moment";
 
 import Route from "../../../models/Route";
 import dbConnect from "../../../utils/db";
+import { routeTimes } from "../../../interfaces";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	let pairs: any[] = [];
@@ -16,7 +17,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			})
 		);
 		let pair: any[] = [];
-		data.forEach((item: [Object]) => {
+		data.forEach(async (item: any[][]) => {
 			item.forEach((el: Object, index: number) => {
 				if (index % 2 === 0) {
 					pair.push(el);
@@ -26,15 +27,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 					pair = [];
 				}
 			});
-		});
-
-		pairs.forEach(async (route: any) => {
+			let times: routeTimes[] = [];
+			pairs.forEach(async (route: any) => {
+				times.push({
+					departingTime: route[0].typeTime,
+					arrivingTime: route[1].typeTime,
+				});
+			});
 			await Route.create({
-				departingStation: route[0].city,
-				arrivingStation: route[1].city,
-				departingTime: route[0].typeTime,
-				arrivingTime: route[1].typeTime,
-				trainNumber: route[0].trainNumber,
+				departingStation: item[0][0].station,
+				arrivingStation: item[0][1].station,
+				trainNumber: item[0][0].trainNumber,
+				times,
 			});
 		});
 	} catch (error) {
