@@ -16,6 +16,7 @@ export type routeTimes = {
 };
 
 export interface RouteModel {
+	line: string;
 	departingStation: string;
 	arrivingStation: string;
 	times: routeTimes[];
