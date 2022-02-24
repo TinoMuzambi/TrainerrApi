@@ -48,6 +48,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				]);
 
 				// Get page content.
+				let line = await page.$eval("body > div.lineHeading_top", (node) =>
+					node.innerHTML.split(" ")
+				);
+				line.length = line.length - 1;
+				line.join(" ");
+
 				const trainNumbers = await page.$$eval(
 					"body > .bgMiddle > table > tbody > tr > td",
 					(nodes) =>
@@ -76,7 +82,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 					stationTimeSplit.length = stationTimeSplit.length - 1;
 					station = stationTimeSplit.join(" ");
 
-					return { type, station, typeTime };
+					return { type, station, typeTime, line };
 				});
 
 				pageContent = departArriveTimesObj.map((obj, index) => {
@@ -96,9 +102,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		await browser?.close();
 	}
 
-	fs.writeFileSync("output.json", JSON.stringify(pages), {
-		flag: "a",
-	});
+	fs.writeFileSync(
+		"output.json",
+		JSON.stringify(pages.filter((item: any[]) => item.length > 0)),
+		{
+			flag: "a",
+		}
+	);
 	res.status(200).json({ success: true, pages });
 };
 

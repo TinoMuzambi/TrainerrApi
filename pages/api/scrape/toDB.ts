@@ -17,32 +17,30 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			})
 		);
 		let pair: any[] = [];
-		data
-			.filter((item: any[]) => item.length > 0)
-			.forEach(async (item: any[]) => {
-				item.forEach((el: Object, index: number) => {
-					if (index % 2 === 0) {
-						pair.push(el);
-					} else {
-						pair.push(el);
-						pairs.push(pair);
-						pair = [];
-					}
-				});
-				let times: routeTimes[] = [];
-				pairs.forEach(async (route: any) => {
-					times.push({
-						departingTime: route[0].typeTime,
-						arrivingTime: route[1].typeTime,
-					});
-				});
-				await Route.create({
-					departingStation: item[0].station,
-					arrivingStation: item[1].station,
-					trainNumber: item[0].trainNumber,
-					times,
+		data.forEach(async (item: any[]) => {
+			item.forEach((el: Object, index: number) => {
+				if (index % 2 === 0) {
+					pair.push(el);
+				} else {
+					pair.push(el);
+					pairs.push(pair);
+					pair = [];
+				}
+			});
+			let times: routeTimes[] = [];
+			pairs.forEach(async (route: any) => {
+				times.push({
+					departingTime: route[0].typeTime,
+					arrivingTime: route[1].typeTime,
 				});
 			});
+			await Route.create({
+				departingStation: item[0].station,
+				arrivingStation: item[1].station,
+				trainNumber: item[0].trainNumber,
+				times,
+			});
+		});
 	} catch (error) {
 		return res.status(400).json({ success: false, error });
 	}
