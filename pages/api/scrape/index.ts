@@ -15,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
 		// Navigate to trains website
 		const page = await browser.newPage();
-		await page.goto("https://cttrains.co.za/FSH_SIM_route_select.php");
+		await page.goto("https://cttrains.co.za/cf_route_select.php");
 
 		// Get options length
 		const optionsLength = await page.$eval(
@@ -92,7 +92,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 					};
 				});
 
-				await page.goto("https://cttrains.co.za/FSH_SIM_route_select.php");
+				await page.goto("https://cttrains.co.za/cf_route_select.php");
 				pages.push(pageContent);
 			}
 		}
@@ -103,7 +103,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	}
 
 	fs.writeFileSync(
-		"./data/fshsim.json",
+		"./data/capeflats.json",
 		JSON.stringify(pages.filter((item: any[]) => item.length > 0)),
 		{
 			flag: "a",
