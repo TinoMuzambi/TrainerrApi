@@ -51,7 +51,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				let lineNode = await page.$eval("body > div.lineHeading_top", (node) =>
 					node.innerHTML.split(" ")
 				);
-				lineNode.length = lineNode.length - 1;
+				lineNode.length = lineNode.indexOf("Results");
 				const line = lineNode.join(" ");
 
 				const trainNumbers = await page.$$eval(
