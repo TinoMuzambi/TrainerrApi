@@ -10,7 +10,7 @@ export interface MetaProps {
 	image?: string;
 }
 
-type routeTimes = {
+export type routeTimes = {
 	departingTime: string;
 	arrivingTime: string;
 };
