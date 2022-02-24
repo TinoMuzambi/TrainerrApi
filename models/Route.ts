@@ -12,13 +12,9 @@ const Route: Schema = new mongoose.Schema(
 			type: String,
 			required: [true, "Route needs an arriving station"],
 		},
-		departingTime: {
-			type: String,
-			required: [true, "Route needs a departing time"],
-		},
-		arrivingTime: {
-			type: String,
-			required: [true, "Route needs an arriving time"],
+		times: {
+			type: [Object],
+			required: [true, "Route needs times"],
 		},
 		trainNumber: {
 			type: Number,
