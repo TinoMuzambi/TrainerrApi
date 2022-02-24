@@ -48,11 +48,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				]);
 
 				// Get page content.
-				let line = await page.$eval("body > div.lineHeading_top", (node) =>
+				let lineNode = await page.$eval("body > div.lineHeading_top", (node) =>
 					node.innerHTML.split(" ")
 				);
-				line.length = line.length - 1;
-				line.join(" ");
+				lineNode.length = lineNode.length - 1;
+				const line = lineNode.join(" ");
 
 				const trainNumbers = await page.$$eval(
 					"body > .bgMiddle > table > tbody > tr > td",
