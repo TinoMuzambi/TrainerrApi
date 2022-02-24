@@ -10,10 +10,14 @@ export interface MetaProps {
 	image?: string;
 }
 
+type routeTimes = {
+	departingTime: string;
+	arrivingTime: string;
+};
+
 export interface RouteModel {
 	departingStation: string;
 	arrivingStation: string;
-	departingTime: string;
-	arrivingTime: string;
+	times: routeTimes[];
 	trainNumber: number;
 }
