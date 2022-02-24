@@ -103,7 +103,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	}
 
 	fs.writeFileSync(
-		"output.json",
+		"./data/southern.json",
 		JSON.stringify(pages.filter((item: any[]) => item.length > 0)),
 		{
 			flag: "a",

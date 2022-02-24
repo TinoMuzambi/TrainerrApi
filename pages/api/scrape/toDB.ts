@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
-import moment from "moment";
 
 import Route from "../../../models/Route";
 import dbConnect from "../../../utils/db";
@@ -11,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		await dbConnect();
 		const data = JSON.parse(
-			fs.readFileSync("./output.json", {
+			fs.readFileSync("./data/output.json", {
 				encoding: "utf8",
 				flag: "r",
 			})
