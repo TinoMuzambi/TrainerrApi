@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		await dbConnect();
 		const data = JSON.parse(
-			fs.readFileSync("./data/capeflats.json", {
+			fs.readFileSync("./data/limnorthern.json", {
 				encoding: "utf8",
 				flag: "r",
 			})
