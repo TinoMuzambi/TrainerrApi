@@ -4,6 +4,10 @@ import { RouteModel } from "../interfaces";
 
 const Route: Schema = new mongoose.Schema(
 	{
+		line: {
+			type: String,
+			required: [true, "Route needs a line"],
+		},
 		departingStation: {
 			type: String,
 			required: [true, "Route needs a departing station"],
