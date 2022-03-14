@@ -12,7 +12,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			const line = req.query.line || "";
 			const page = Number.parseInt(req.query.page as string) || PAGE;
 			const perPage = Number.parseInt(req.query.perPage as string) || PER_PAGE;
-			const pages = Math.floor(471 / perPage);
+			const noDocs = await Route.countDocuments(line ? { line: line } : {});
+			const pages = Math.floor(noDocs / perPage);
 
 			try {
 				const routes = await Route.find(line ? { line: line } : {})
