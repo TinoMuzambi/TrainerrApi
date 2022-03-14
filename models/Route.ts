@@ -29,6 +29,15 @@ const Route: Schema = new mongoose.Schema(
 		timestamps: true,
 	}
 );
+// Duplicate the ID field.
+Route.virtual("id").get(function () {
+	return this._id.toHexString();
+});
+
+// Ensure virtual fields are serialised.
+Route.set("toJSON", {
+	virtuals: true,
+});
 
 export default mongoose.models.Route ||
 	mongoose.model<RouteModel>("Route", Route, "routes");
