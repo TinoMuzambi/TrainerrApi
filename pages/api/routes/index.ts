@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		case "GET": {
 			const line = req.query.line || "";
 			try {
-				const routes = await Route.find({ line: line });
+				const routes = await Route.find(line ? { line: line } : {});
 				res.status(200).json({ success: true, routes });
 			} catch (error) {
 				res.status(400).json({ success: false, error });
