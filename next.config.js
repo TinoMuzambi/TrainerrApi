@@ -1,15 +1,21 @@
 module.exports = {
-	webpack5: true,
-	env: {
-		// Ensure you've added this in an .env file.
-		MONGO_URI: process.env.MONGO_URI,
-	},
 	async redirects() {
 		return [
 			{
 				source: "/",
 				destination: "/api/routes",
 				permanent: true,
+			},
+		];
+	},
+	async headers() {
+		return [
+			{
+				source: "/:path*",
+				headers: [
+					{ key: "X-Content-Type-Options", value: "nosniff" },
+					{ key: "Referrer-Policy", value: "no-referrer" },
+				],
 			},
 		];
 	},
