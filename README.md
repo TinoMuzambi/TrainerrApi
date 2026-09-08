@@ -28,6 +28,7 @@ Copy `.env.example` to `.env.local` and provide a least-privilege MongoDB connec
 npm ci
 npm run typecheck
 npm run build
+npm audit --omit=dev --audit-level=high
 npm start
 ```
 
@@ -35,7 +36,7 @@ The API returns a generic `503` response when the data store is unavailable and 
 
 ## Deployment
 
-- Use Node.js 20 or newer.
+- Use Node.js 22 or newer.
 - Restrict the database credential to read-only access for the routes collection.
 - Configure `MONGO_URI` as a server-side secret; it must never use a `NEXT_PUBLIC_` prefix or `next.config.js` `env` block.
 - Confirm the route data is current and authorised before presenting it as a live timetable.
